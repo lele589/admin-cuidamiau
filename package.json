@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate:new": "knex migrate:make --migrations-directory src/db/migrations",
+    "migrate:new": "knex migrate:make --knexfile knexfile.ts",
     "migrate:last": "knex migrate:latest --knexfile knexfile.ts",
     "migrate:rollback": "knex migrate:rollback --knexfile knexfile.ts"
   },
