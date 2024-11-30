@@ -1,16 +1,12 @@
-import type { Knex } from "knex";
+import { Knex } from 'knex';
 
-const config: { [key: string]: Knex.Config } = {
-  development: {
-    client: "sqlite3",
-    connection: {
-      filename: "./dev.sqlite3"
-    },
-    migrations: {
-      directory: './src/database/migrations'
-    },
-    useNullAsDefault: true
-  }
+const config: Knex.Config = {
+  client: 'sqlite3',
+  connection: {
+    filename: './dev.sqlite3',
+  },
+  useNullAsDefault: true, // Needed for SQLite
 };
 
 export default config;
+    
