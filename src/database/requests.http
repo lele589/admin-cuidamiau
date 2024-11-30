@@ -1,0 +1,28 @@
+### Get all users
+GET http://localhost:3000/api/users
+
+### Get single user
+GET http://localhost:3000/api/users/1
+
+### Create user
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "first_name": "Elena",
+  "last_name": "Carrasco",
+  "dni": "12345679",
+  "email": "elena@example.com",
+  "phone_number": "+34123456788"
+}
+
+### Update user
+PUT http://localhost:3000/api/users/1
+Content-Type: application/json
+
+{
+    "first_name": "Bea",
+}
+
+### Delete user
+DELETE http://localhost:3000/api/users/1 
